@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>微信 macOS 客户端撤回拦截与多开</title>
+      <link href="/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/"/>
+      <url>/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/</url>
+      
+        <content type="html"><![CDATA[<h1 id="微信-macOS-客户端撤回拦截与多开"><a href="#微信-macOS-客户端撤回拦截与多开" class="headerlink" title="微信 macOS 客户端撤回拦截与多开"></a>微信 macOS 客户端撤回拦截与多开</h1><h2 id="地址：https-github-com-Sunnyyoung-WeChatTweak-macOS"><a href="#地址：https-github-com-Sunnyyoung-WeChatTweak-macOS" class="headerlink" title="地址：https://github.com/Sunnyyoung/WeChatTweak-macOS"></a>地址：<a href="https://github.com/Sunnyyoung/WeChatTweak-macOS" target="_blank" rel="noopener">https://github.com/Sunnyyoung/WeChatTweak-macOS</a></h2><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g59ucyclw3j30n220ewoj.jpg" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> soft </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> soft </tag>
+            
+            <tag> wechat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git 撤销操作</title>
+      <link href="/git/git-che-xiao-cao-zuo/"/>
+      <url>/git/git-che-xiao-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="350" height="86" src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe><h2 id="git-撤销-commit"><a href="#git-撤销-commit" class="headerlink" title="git 撤销 commit"></a>git 撤销 commit</h2><blockquote><p>今天在合并分支时出错，想撤销 commit，发现 idea 自身对撤销 commit 的操作并不友好，于是翻了翻 git 手册，整理下撤销操作的命令！</p></blockquote><ol><li><p>覆盖上次提交 </p><p>如果本次提交漏了那个文件，可以使用<code>amend</code>来重复覆盖上次提交，最终会只有一个提交，第二次提交的结果会覆盖第一次提交的结果。</p><pre class=" language-shell"><code class="language-shell">git commit --amend</code></pre><p>更改提交信息   </p><p>如果上次提交后未做任何修改，再次执行就会只覆盖原来的提交信息。</p></li><li><p>取消提交的文件</p><p>取消本次提交的文件   </p><p>不删除工作空间改动，撤销 commit 和 add . 操作</p><pre class=" language-shell"><code class="language-shell">git reset --mixed HEAD^</code></pre><ul><li><p>可以添加文件名字指定文件撤销。</p></li><li><p><code>HEAD^</code> 等价于 <code>HEAD~1</code></p></li><li><p><code>HEAD^</code>的意思是上一个版本，也可以写成<code>HEAD~1</code></p></li><li><p>如果你进行了2次commit，想都撤回，可以使用<code>HEAD~2</code></p></li><li><p>参数： </p><ul><li><p><code>--mixed</code><br>不删除工作空间改动代码，撤销 <code>commit</code>，并且撤销 <code>git add .</code> 操作<br>这个为默认参数,<code>git reset --mixed HEAD^</code> 和 <code>git reset HEAD^</code> 效果是一样的。</p></li><li><p><code>--soft</code><br>不删除工作空间改动代码，撤销<code>commit</code>，不撤销<code>git add .</code> 。</p></li><li><p><code>--hard</code><br>删除工作空间改动代码，撤销<code>commit</code>，撤销<code>git add .</code> </p><p>注意完成这个操作后，就恢复到了上一次的 commit 状态。</p></li></ul></li></ul></li></ol><h2 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h2><p>清除本地有而远端没有的无用分支</p><pre class=" language-shell"><code class="language-shell">git remote prune origin</code></pre><p><img src="../../../../%E7%99%BE%E5%BA%A6%E4%BA%91%E5%90%8C%E6%AD%A5%E7%9B%98/sync/blog/source/imgs/image-20190712112007699.png" alt="image-20190712112007699"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> commit </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
