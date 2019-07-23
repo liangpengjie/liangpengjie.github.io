@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>mac 配置</title>
+      <link href="/mac/mac-pei-zhi/"/>
+      <url>/mac/mac-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><ol><li><p>可安装任何来源的软件 <code>sudo spctl --master-disable</code></p></li><li><p>Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装应用显示在第二屏<br><code>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock</code></p></li><li><p>Launchpad 每行每列展示数量设置(数字可以自己设置)</p><ol><li><p>每行数量设置<code>defaults write com.apple.dock springboard-columns -int 7</code>  </p></li><li><p>每列数量设置<code>defaults write com.apple.dock springboard-rows -int 7</code>  </p></li><li><p>修改后需要重启 Launchpad</p><p><code>defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock</code></p></li><li><p>重置 Launchpad</p><pre class=" language-shell"><code class="language-shell">defaults write com.apple.dock springboard-rows Defaultdefaults write com.apple.dock springboard-columns Defaultdefaults write com.apple.dock ResetLaunchPad -bool TRUEkillall Dock</code></pre></li></ol></li></ol><ol start="4"><li>Mac Dock栏自动显示和隐藏没有延迟：<ul><li>设置无延迟<code>defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock</code></li><li>恢复<code>defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock</code></li></ul></li></ol><h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p>包管理工具，官方称之为The missing package manager for OS X.<br>官网：<a href="https://brew.sh" target="_blank" rel="noopener">https://brew.sh</a></p><pre class=" language-shell"><code class="language-shell">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> mac </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>微信 macOS 客户端撤回拦截与多开</title>
       <link href="/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/"/>
       <url>/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/</url>

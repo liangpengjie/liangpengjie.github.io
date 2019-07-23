@@ -4,15 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="git 撤销操作, 木木的博客">
-    <meta name="description" content="
+    <meta name="keywords" content="mac 配置, 木木的博客">
+    <meta name="description" content="初始化配置
+可安装任何来源的软件 sudo spctl --master-disable
 
-git 撤销 commit
-今天在合并分支时出错，想撤销 commit，发现 idea 自身对撤销 commit 的操作并不友好，于是翻了翻 git 手册，整理下撤销操作的命令！
-
-
-覆盖上次提交 
-如果本次提交漏了那个文件，可以使用a">
+Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装应用显示在第二屏defaults write com.apple.dock Res">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +16,7 @@ git 撤销 commit
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>git 撤销操作 | 木木的博客</title>
+    <title>mac 配置 | 木木的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -181,13 +177,13 @@ git 撤销 commit
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        git 撤销操作
+                        mac 配置
                     </div>
                 </div>
             </div>
@@ -298,12 +294,8 @@ git 撤销 commit
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git/" target="_blank">
-                                <span class="chip bg-color">git</span>
-                            </a>
-                        
-                            <a href="/tags/commit/" target="_blank">
-                                <span class="chip bg-color">commit</span>
+                            <a href="/tags/配置/" target="_blank">
+                                <span class="chip bg-color">配置</span>
                             </a>
                         
                     </div>
@@ -314,8 +306,8 @@ git 撤销 commit
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category" target="_blank">
-                                git
+                            <a href="/categories/mac/" class="post-category" target="_blank">
+                                mac
                             </a>
                         
                     </div>
@@ -326,14 +318,14 @@ git 撤销 commit
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-12
+                    2019-07-23
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        368
+                        239
                     </div>
                     
 
@@ -356,48 +348,38 @@ git 撤销 commit
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="350" height="86" src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
-
-<h2 id="git-撤销-commit"><a href="#git-撤销-commit" class="headerlink" title="git 撤销 commit"></a>git 撤销 commit</h2><blockquote>
-<p>今天在合并分支时出错，想撤销 commit，发现 idea 自身对撤销 commit 的操作并不友好，于是翻了翻 git 手册，整理下撤销操作的命令！</p>
-</blockquote>
+                <h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><ol>
+<li><p>可安装任何来源的软件 <code>sudo spctl --master-disable</code></p>
+</li>
+<li><p>Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装应用显示在第二屏<br><code>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock</code></p>
+</li>
+<li><p>Launchpad 每行每列展示数量设置(数字可以自己设置)</p>
 <ol>
-<li><p>覆盖上次提交 </p>
-<p>如果本次提交漏了那个文件，可以使用<code>amend</code>来重复覆盖上次提交，最终会只有一个提交，第二次提交的结果会覆盖第一次提交的结果。</p>
-<pre class=" language-shell"><code class="language-shell">git commit --amend</code></pre>
-<p>更改提交信息   </p>
-<p>如果上次提交后未做任何修改，再次执行就会只覆盖原来的提交信息。</p>
+<li><p>每行数量设置<code>defaults write com.apple.dock springboard-columns -int 7</code>  </p>
 </li>
-<li><p>取消提交的文件</p>
-<p>取消本次提交的文件   </p>
-<p>不删除工作空间改动，撤销 commit 和 add . 操作</p>
-<pre class=" language-shell"><code class="language-shell">git reset --mixed HEAD^</code></pre>
-<ul>
-<li><p>可以添加文件名字指定文件撤销。</p>
+<li><p>每列数量设置<code>defaults write com.apple.dock springboard-rows -int 7</code>  </p>
 </li>
-<li><p><code>HEAD^</code> 等价于 <code>HEAD~1</code></p>
+<li><p>修改后需要重启 Launchpad</p>
+<p><code>defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock</code></p>
 </li>
-<li><p><code>HEAD^</code>的意思是上一个版本，也可以写成<code>HEAD~1</code></p>
+<li><p>重置 Launchpad</p>
+<pre class=" language-shell"><code class="language-shell">defaults write com.apple.dock springboard-rows Default
+defaults write com.apple.dock springboard-columns Default
+defaults write com.apple.dock ResetLaunchPad -bool TRUE
+killall Dock</code></pre>
 </li>
-<li><p>如果你进行了2次commit，想都撤回，可以使用<code>HEAD~2</code></p>
+</ol>
 </li>
-<li><p>参数： </p>
-<ul>
-<li><p><code>--mixed</code><br>不删除工作空间改动代码，撤销 <code>commit</code>，并且撤销 <code>git add .</code> 操作<br>这个为默认参数,<code>git reset --mixed HEAD^</code> 和 <code>git reset HEAD^</code> 效果是一样的。</p>
-</li>
-<li><p><code>--soft</code><br>不删除工作空间改动代码，撤销<code>commit</code>，不撤销<code>git add .</code> 。</p>
-</li>
-<li><p><code>--hard</code><br>删除工作空间改动代码，撤销<code>commit</code>，撤销<code>git add .</code> </p>
-<p>注意完成这个操作后，就恢复到了上一次的 commit 状态。</p>
-</li>
-</ul>
-</li>
+</ol>
+<ol start="4">
+<li>Mac Dock栏自动显示和隐藏没有延迟：<ul>
+<li>设置无延迟<code>defaults write com.apple.Dock autohide-delay -float 0 &amp;&amp; killall Dock</code></li>
+<li>恢复<code>defaults delete com.apple.Dock autohide-delay &amp;&amp; killall Dock</code></li>
 </ul>
 </li>
 </ol>
-<h2 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h2><p>清除本地有而远端没有的无用分支</p>
-<pre class=" language-shell"><code class="language-shell">git remote prune origin</code></pre>
-<p><img src="../../../../%E7%99%BE%E5%BA%A6%E4%BA%91%E5%90%8C%E6%AD%A5%E7%9B%98/sync/blog/source/imgs/image-20190712112007699.png" alt="image-20190712112007699"></p>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p>包管理工具，官方称之为The missing package manager for OS X.<br>官网：<a href="https://brew.sh" target="_blank" rel="noopener">https://brew.sh</a></p>
+<pre class=" language-shell"><code class="language-shell">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
 
             </div>
             <hr/>
@@ -556,9 +538,9 @@ git 撤销 commit
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《git 撤销操作》
+                    《mac 配置》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/git/git-che-xiao-cao-zuo/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/mac/mac-pei-zhi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 木木
             </a> 采用
@@ -858,9 +840,63 @@ git 撤销 commit
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/mac/mac-pei-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="mac 配置">
+                        
+                        <span class="card-title">mac 配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            初始化配置
+可安装任何来源的软件 sudo spctl --master-disable
+
+Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装应用显示在第二屏defaults write com.apple.dock Res
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mac/" class="post-category" target="_blank">
+                                    mac
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/配置/" target="_blank">
+                        <span class="chip bg-color">配置</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/">
                     <div class="card-image">
@@ -879,9 +915,9 @@ git 撤销 commit
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -903,67 +939,6 @@ git 撤销 commit
                     
                     <a href="/tags/wechat/" target="_blank">
                         <span class="chip bg-color">wechat</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/git/git-che-xiao-cao-zuo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git 撤销操作">
-                        
-                        <span class="card-title">git 撤销操作</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-
-git 撤销 commit
-今天在合并分支时出错，想撤销 commit，发现 idea 自身对撤销 commit 的操作并不友好，于是翻了翻 git 手册，整理下撤销操作的命令！
-
-
-覆盖上次提交 
-如果本次提交漏了那个文件，可以使用a
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/git/" class="post-category" target="_blank">
-                                    git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/git/" target="_blank">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                    <a href="/tags/commit/" target="_blank">
-                        <span class="chip bg-color">commit</span>
                     </a>
                     
                 </div>
