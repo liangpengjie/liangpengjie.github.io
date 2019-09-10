@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>木木的博客</title>
+  
+  <subtitle>闲之所记，且当博君一笑</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://liangpengjie.github.io/"/>
+  <updated>2019-07-23T08:56:42.000Z</updated>
+  <id>https://liangpengjie.github.io/</id>
+  
+  <author>
+    <name>木木</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac 配置</title>
+    <link href="https://liangpengjie.github.io/mac/mac-pei-zhi/"/>
+    <id>https://liangpengjie.github.io/mac/mac-pei-zhi/</id>
+    <published>2019-07-23T08:19:46.000Z</published>
+    <updated>2019-07-23T08:56:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;初始化配置&quot;&gt;&lt;a href=&quot;#初始化配置&quot; class=&quot;headerlink&quot; title=&quot;初始化配置&quot;&gt;&lt;/a&gt;初始化配置&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;可安装任何来源的软件 &lt;code&gt;sudo spctl
+        
+      
+    
+    </summary>
+    
+      <category term="mac" scheme="https://liangpengjie.github.io/categories/mac/"/>
+    
+    
+      <category term="配置" scheme="https://liangpengjie.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信 macOS 客户端撤回拦截与多开</title>
+    <link href="https://liangpengjie.github.io/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/"/>
+    <id>https://liangpengjie.github.io/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/</id>
+    <published>2019-07-23T08:12:09.000Z</published>
+    <updated>2019-07-23T08:15:17.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;微信-macOS-客户端撤回拦截与多开&quot;&gt;&lt;a href=&quot;#微信-macOS-客户端撤回拦截与多开&quot; class=&quot;headerlink&quot; title=&quot;微信 macOS 客户端撤回拦截与多开&quot;&gt;&lt;/a&gt;微信 macOS 客户端撤回拦截与多开&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="soft" scheme="https://liangpengjie.github.io/categories/soft/"/>
+    
+    
+      <category term="soft" scheme="https://liangpengjie.github.io/tags/soft/"/>
+    
+      <category term="wechat" scheme="https://liangpengjie.github.io/tags/wechat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 撤销操作</title>
+    <link href="https://liangpengjie.github.io/git/git-che-xiao-cao-zuo/"/>
+    <id>https://liangpengjie.github.io/git/git-che-xiao-cao-zuo/</id>
+    <published>2019-07-12T03:05:16.000Z</published>
+    <updated>2019-07-12T05:18:32.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;350&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://liangpengjie.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://liangpengjie.github.io/tags/git/"/>
+    
+      <category term="commit" scheme="https://liangpengjie.github.io/tags/commit/"/>
+    
+  </entry>
+  
+</feed>
