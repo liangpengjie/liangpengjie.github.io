@@ -298,12 +298,32 @@ office 365
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:  
+                    2019-10-23
+                </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:  
+                    131
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:  
+                    1 分
+                </div>
                 
 				
                 
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:  
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
             
         </div>
@@ -340,41 +360,6 @@ office 365
             
 
     <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://liangpengjie.github.io" rel="external nofollow noreferrer">木木</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://liangpengjie.github.io/mac/mac-huan-jing-pei-zhi/">https://liangpengjie.github.io/mac/mac-huan-jing-pei-zhi/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="https://liangpengjie.github.io" target="_blank">木木</a>
-                    !
-                </span>
-            </div>
         
     </div>
 
@@ -828,45 +813,50 @@ office 365
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i> 本篇
-            </div>
+                <i class="fas fa-chevron-left"></i> 上一篇</div>
             <div class="card">
-                <a href="/mac/mac-huan-jing-pei-zhi/">
+                <a href="/gong-ju/markdown-shu-xue-gong-shi/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2019/10/23/h8tguNIFjP2Ed4K.jpg" class="responsive-img" alt="mac 环境配置">
                         
-                        <span class="card-title">mac 环境配置</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="markdown 数学公式">
+                        
+                        <span class="card-title">markdown 数学公式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            今天重装了 Mac 系统，记录下环境配置及常用软件
+                            数学公式Markdown 数学公式语法[toc]
+行内与独行
+行内公式：将公式插入到本行内，符号：$公式内容$，如：$xyz$
+独行公式：将公式插入到新的一行内，并且居中，符号：$$公式内容$$，如：$$xyz$$
+
+上标、下标与组合
+上标
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/mac/" class="post-category">
-                                    mac
+                            <a href="/categories/工具/" class="post-category">
+                                    工具
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/配置/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
                     </a>
                     
                 </div>
@@ -932,6 +922,43 @@ Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装�
 </div>
 
 
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('220')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 木木说<br />'
+            + '文章作者: 木木<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
 
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
@@ -972,6 +999,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             | Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
             | Theme <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+             <i class="fas fa-chart-area"></i> 站点总字数: <span class="white-color">1.5k</span> 字
             
             
             
