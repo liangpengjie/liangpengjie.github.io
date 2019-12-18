@@ -1,10 +1,13 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="mac 配置, 木木说">
-    <meta name="description" content="初始化配置
-可安装任何来源的软件 sudo spctl --master-disable
+    <meta name="keywords" content="Nginx 配置访问本地目录, 木木说">
+    <meta name="description" content="server {
+    listen       8888; # 监听端口
+    server_name  peer; # 服务名
+    charset utf-8; # 字符集，可处理中文乱码
+    location / {
 
-Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装应用显示在第二屏defaults write com.apple.dock Res">
+ ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -12,7 +15,7 @@ Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>mac 配置 | 木木说</title>
+    <title>Nginx 配置访问本地目录 | 木木说</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -230,13 +233,13 @@ Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        mac 配置
+                        Nginx 配置访问本地目录
                     </div>
                 </div>
             </div>
@@ -354,23 +357,14 @@ Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/配置/">
-                                <span class="chip bg-color">配置</span>
+                            <a href="/tags/nginx/">
+                                <span class="chip bg-color">nginx</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/mac/" class="post-category">
-                                mac
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -379,21 +373,21 @@ Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
-                    2019-07-23
+                    2019-12-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:  
-                    2019-10-24
+                    2019-12-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:  
-                    227
+                    92
                 </div>
                 
 
@@ -416,38 +410,18 @@ Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <meta name="generator" content="Hexo 3.9.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><ol>
-<li><p>可安装任何来源的软件 <code>sudo spctl --master-disable</code></p>
-</li>
-<li><p>Launchpad 图标默认排，苹果自带应用显示在第一屏，自己安装应用显示在第二屏<br><code>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock</code></p>
-</li>
-<li><p>Launchpad 每行每列展示数量设置</p>
-<ol>
-<li><p>每行数量设置<code>defaults write com.apple.dock springboard-columns -int 7</code>  </p>
-</li>
-<li><p>每列数量设置<code>defaults write com.apple.dock springboard-rows -int 7</code>  </p>
-</li>
-<li><p>修改后需要重启 Launchpad</p>
-<p><code>defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock</code></p>
-</li>
-<li><p>重置 Launchpad</p>
-<pre class=" language-shell"><code class="language-shell">defaults write com.apple.dock springboard-rows Default
-defaults write com.apple.dock springboard-columns Default
-defaults write com.apple.dock ResetLaunchPad -bool TRUE
-killall Dock</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-<ol start="4">
-<li>Mac Dock栏自动显示和隐藏没有延迟：<ul>
-<li>设置无延迟<code>defaults write com.apple.Dock autohide-delay -float 0 && killall Dock</code></li>
-<li>恢复<code>defaults delete com.apple.Dock autohide-delay && killall Dock</code></li>
-</ul>
-</li>
-</ol>
-<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p>包管理工具，官方称之为The missing package manager for OS X.<br>官网：<a href="https://brew.sh" target="_blank" rel="noopener">https://brew.sh</a></p>
-<pre class=" language-shell"><code class="language-shell">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
+                <meta name="generator" content="Hexo 3.9.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><pre class=" language-shell"><code class="language-shell">server {
+    listen       8888; # 监听端口
+    server_name  peer; # 服务名
+    charset utf-8; # 字符集，可处理中文乱码
+    location / {
+<!--more-->
+        autoindex on; # 开启目录浏览功能
+        autoindex_exact_size off; # 详细文件大小统计，让文件大小显示MB，GB单位，默认为b
+        autoindex_localtime on; # 服务器本地时区显示文件修改日期
+        root /Users/mumu/learn/; # 指定实际目录绝对路径
+    }
+}</code></pre>
 
             </div>
             <hr>
@@ -473,7 +447,7 @@ killall Dock</code></pre>
                     </i>
                     </span>
                 <span class="reprint-info">
-                    <a href="https://liangpengjie.github.io/mac/mac-pei-zhi/">https://liangpengjie.github.io/mac/mac-pei-zhi/</a>
+                    <a href="https://liangpengjie.github.io/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/">https://liangpengjie.github.io/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -511,8 +485,8 @@ killall Dock</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/配置/">
-                                    <span class="chip bg-color">配置</span>
+                                <a href="/tags/nginx/">
+                                    <span class="chip bg-color">nginx</span>
                                 </a>
                             
                         </div>
@@ -943,43 +917,48 @@ killall Dock</code></pre>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i> 上一篇</div>
+                <i class="far fa-dot-circle"></i> 本篇
+            </div>
             <div class="card">
-                <a href="/mac/mac-huan-jing-pei-zhi/">
+                <a href="/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2019/10/23/h8tguNIFjP2Ed4K.jpg" class="responsive-img" alt="mac 环境配置">
                         
-                        <span class="card-title">mac 环境配置</span>
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Nginx 配置访问本地目录">
+                        
+                        <span class="card-title">Nginx 配置访问本地目录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            今天重装了 Mac 系统，记录下环境配置及常用软件
+                            server {
+    listen       8888; # 监听端口
+    server_name  peer; # 服务名
+    charset utf-8; # 字符集，可处理中文乱码
+    location / {
+
+ 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-18
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/mac/" class="post-category">
-                                    mac
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            木木
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/配置/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/nginx/">
+                        <span class="chip bg-color">nginx</span>
                     </a>
                     
                 </div>
@@ -993,32 +972,31 @@ killall Dock</code></pre>
                 下一篇 <i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/">
+                <a href="/gong-ju/markdown-shu-xue-gong-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="微信 macOS 客户端撤回拦截与多开">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="markdown 数学公式">
                         
-                        <span class="card-title">微信 macOS 客户端撤回拦截与多开</span>
+                        <span class="card-title">markdown 数学公式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            微信 macOS 客户端撤回拦截与多开地址：https://github.com/Sunnyyoung/WeChatTweak-macOS使用说明
-
+                            Markdown 数学公式语法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/soft/" class="post-category">
-                                    soft
+                            <a href="/categories/工具/" class="post-category">
+                                    工具
                                 </a>
                             
                             
@@ -1028,12 +1006,8 @@ killall Dock</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/soft/">
-                        <span class="chip bg-color">soft</span>
-                    </a>
-                    
-                    <a href="/tags/wechat/">
-                        <span class="chip bg-color">wechat</span>
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
                     </a>
                     
                 </div>

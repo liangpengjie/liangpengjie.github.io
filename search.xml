@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Nginx 配置访问本地目录</title>
+      <link href="/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/"/>
+      <url>/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><pre class=" language-shell"><code class="language-shell">server {    listen       8888; # 监听端口    server_name  peer; # 服务名    charset utf-8; # 字符集，可处理中文乱码    location / {<!--more-->        autoindex on; # 开启目录浏览功能        autoindex_exact_size off; # 详细文件大小统计，让文件大小显示MB，GB单位，默认为b        autoindex_localtime on; # 服务器本地时区显示文件修改日期        root /Users/mumu/learn/; # 指定实际目录绝对路径    }}</code></pre></body></html>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>markdown 数学公式</title>
       <link href="/gong-ju/markdown-shu-xue-gong-shi/"/>
       <url>/gong-ju/markdown-shu-xue-gong-shi/</url>

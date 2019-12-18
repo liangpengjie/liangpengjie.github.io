@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liangpengjie.github.io/"/>
-  <updated>2019-12-12T03:12:37.875Z</updated>
+  <updated>2019-12-18T07:22:01.118Z</updated>
   <id>https://liangpengjie.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Nginx 配置访问本地目录</title>
+    <link href="https://liangpengjie.github.io/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/"/>
+    <id>https://liangpengjie.github.io/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/</id>
+    <published>2019-12-18T07:22:01.000Z</published>
+    <updated>2019-12-18T07:22:01.118Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;pre class=&quot; language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;server {
+    listen       8888; # 监听端口
+    server_name 
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="nginx" scheme="https://liangpengjie.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown 数学公式</title>
     <link href="https://liangpengjie.github.io/gong-ju/markdown-shu-xue-gong-shi/"/>
     <id>https://liangpengjie.github.io/gong-ju/markdown-shu-xue-gong-shi/</id>
     <published>2019-12-12T02:44:16.000Z</published>
-    <updated>2019-12-12T03:12:37.875Z</updated>
+    <updated>2019-12-12T03:40:08.588Z</updated>
     
     <summary type="html">
     
