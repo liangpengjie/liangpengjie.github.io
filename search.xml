@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>Nginx 配置访问本地目录</title>
-      <link href="/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/"/>
-      <url>/uncategorized/nginx-pei-zhi-fang-wen-ben-di-mu-lu/</url>
-      
-        <content type="html"><![CDATA[<html><head></head><body><pre class=" language-shell"><code class="language-shell">server {    listen       8888; # 监听端口    server_name  peer; # 服务名    charset utf-8; # 字符集，可处理中文乱码    location / {<!--more-->        autoindex on; # 开启目录浏览功能        autoindex_exact_size off; # 详细文件大小统计，让文件大小显示MB，GB单位，默认为b        autoindex_localtime on; # 服务器本地时区显示文件修改日期        root /Users/mumu/learn/; # 指定实际目录绝对路径    }}</code></pre></body></html>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> nginx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>markdown 数学公式</title>
       <link href="/gong-ju/markdown-shu-xue-gong-shi/"/>
       <url>/gong-ju/markdown-shu-xue-gong-shi/</url>
@@ -102,7 +83,7 @@
       <link href="/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/"/>
       <url>/soft/wei-xin-macos-ke-hu-duan-che-hui-lan-jie-yu-duo-kai/</url>
       
-        <content type="html"><![CDATA[<html><head></head><body><h1 id="微信-macOS-客户端撤回拦截与多开"><a href="#微信-macOS-客户端撤回拦截与多开" class="headerlink" title="微信 macOS 客户端撤回拦截与多开"></a>微信 macOS 客户端撤回拦截与多开</h1><h2 id="地址：https-github-com-Sunnyyoung-WeChatTweak-macOS"><a href="#地址：https-github-com-Sunnyyoung-WeChatTweak-macOS" class="headerlink" title="地址：https://github.com/Sunnyyoung/WeChatTweak-macOS"></a>地址：<a href="https://github.com/Sunnyyoung/WeChatTweak-macOS" target="_blank" rel="noopener">https://github.com/Sunnyyoung/WeChatTweak-macOS</a></h2><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g59ucyclw3j30n220ewoj.jpg" alt></p></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="微信-macOS-客户端撤回拦截与多开"><a href="#微信-macOS-客户端撤回拦截与多开" class="headerlink" title="微信 macOS 客户端撤回拦截与多开"></a>微信 macOS 客户端撤回拦截与多开</h1><h2 id="mac-微信小助手"><a href="#mac-微信小助手" class="headerlink" title="mac 微信小助手"></a>mac 微信小助手</h2><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a><a href="https://github.com/MustangYM/WeChatExtension-ForMac" target="_blank" rel="noopener">链接</a></h3><p><img src="https://cdn.jsdelivr.net/gh/liangpengjie/mumuimgs/20191223121904.jpg" alt="-w988"><br><img src="https://cdn.jsdelivr.net/gh/liangpengjie/mumuimgs/20191223121911.jpg" alt="-w999"></p><h3 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a><a href="https://github.com/TKkk-iOSer/wechat-alfred-workflow" target="_blank" rel="noopener">Alfred</a></h3><p><img src="https://i.loli.net/2019/11/14/nbiPaHyhoFWzKLp.jpg" alt></p></body></html>]]></content>
       
       
       <categories>
@@ -129,7 +110,7 @@
       <link href="/git/git-che-xiao-cao-zuo/"/>
       <url>/git/git-che-xiao-cao-zuo/</url>
       
-        <content type="html"><![CDATA[<html><head></head><body><h2 id="git-撤销-commit"><a href="#git-撤销-commit" class="headerlink" title="git 撤销 commit"></a>git 撤销 commit</h2><blockquote><p>今天在合并分支时出错，想撤销 commit，发现 idea 自身对撤销 commit 的操作并不友好，于是翻了翻 git 手册，整理下撤销操作的命令！</p></blockquote><ol><li><p>覆盖上次提交 </p><p>如果本次提交漏了那个文件，可以使用<code>amend</code>来重复覆盖上次提交，最终会只有一个提交，第二次提交的结果会覆盖第一次提交的结果。</p><pre class=" language-shell"><code class="language-shell">git commit --amend</code></pre><p>更改提交信息   </p><p>如果上次提交后未做任何修改，再次执行就会只覆盖原来的提交信息。</p></li><li><p>取消提交的文件</p><p>取消本次提交的文件   </p><p>不删除工作空间改动，撤销 commit 和 add . 操作</p><pre class=" language-shell"><code class="language-shell">git reset --mixed HEAD^</code></pre><ul><li><p>可以添加文件名字指定文件撤销。</p></li><li><p><code>HEAD^</code> 等价于 <code>HEAD~1</code></p></li><li><p><code>HEAD^</code>的意思是上一个版本，也可以写成<code>HEAD~1</code></p></li><li><p>如果你进行了2次commit，想都撤回，可以使用<code>HEAD~2</code></p></li><li><p>参数： </p><ul><li><p><code>--mixed</code><br>不删除工作空间改动代码，撤销 <code>commit</code>，并且撤销 <code>git add .</code> 操作<br>这个为默认参数,<code>git reset --mixed HEAD^</code> 和 <code>git reset HEAD^</code> 效果是一样的。</p></li><li><p><code>--soft</code><br>不删除工作空间改动代码，撤销<code>commit</code>，不撤销<code>git add .</code> 。</p></li><li><p><code>--hard</code><br>删除工作空间改动代码，撤销<code>commit</code>，撤销<code>git add .</code> </p><p>注意完成这个操作后，就恢复到了上一次的 commit 状态。</p></li></ul></li></ul></li></ol><h2 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h2><p>清除本地有而远端没有的无用分支</p><pre class=" language-shell"><code class="language-shell">git remote prune origin</code></pre><img src="/Users/mumu/Library/Application Support/typora-user-images/image-20191024180521735.png" alt="image-20191024180521735" style="zoom: 67%;"></body></html>]]></content>
+        <content type="html"><![CDATA[<html><head></head><body><h2 id="git-撤销-commit"><a href="#git-撤销-commit" class="headerlink" title="git 撤销 commit"></a>git 撤销 commit</h2><blockquote><p>今天在合并分支时出错，想撤销 commit，发现 idea 自身对撤销 commit 的操作并不友好，于是翻了翻 git 手册，整理下撤销操作的命令！</p></blockquote><ol><li><p>覆盖上次提交 </p><p>如果本次提交漏了那个文件，可以使用<code>amend</code>来重复覆盖上次提交，最终会只有一个提交，第二次提交的结果会覆盖第一次提交的结果。</p><pre class=" language-shell"><code class="language-shell">git commit --amend</code></pre><p>更改提交信息   </p><p>如果上次提交后未做任何修改，再次执行就会只覆盖原来的提交信息。</p></li><li><p>取消提交的文件</p><p>取消本次提交的文件   </p><p>不删除工作空间改动，撤销 commit 和 add . 操作</p><pre class=" language-shell"><code class="language-shell">git reset --mixed HEAD^</code></pre><ul><li><p>可以添加文件名字指定文件撤销。</p></li><li><p><code>HEAD^</code> 等价于 <code>HEAD~1</code></p></li><li><p><code>HEAD^</code>的意思是上一个版本，也可以写成<code>HEAD~1</code></p></li><li><p>如果你进行了2次commit，想都撤回，可以使用<code>HEAD~2</code></p></li><li><p>参数： </p><ul><li><p><code>--mixed</code><br>不删除工作空间改动代码，撤销 <code>commit</code>，并且撤销 <code>git add .</code> 操作<br>这个为默认参数,<code>git reset --mixed HEAD^</code> 和 <code>git reset HEAD^</code> 效果是一样的。</p></li><li><p><code>--soft</code><br>不删除工作空间改动代码，撤销<code>commit</code>，不撤销<code>git add .</code> 。</p></li><li><p><code>--hard</code><br>删除工作空间改动代码，撤销<code>commit</code>，撤销<code>git add .</code> </p><p>注意完成这个操作后，就恢复到了上一次的 commit 状态。</p></li></ul></li></ul></li></ol><h2 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h2><p>清除本地有而远端没有的无用分支</p><pre class=" language-shell"><code class="language-shell">git remote prune origin</code></pre></body></html>]]></content>
       
       
       <categories>
